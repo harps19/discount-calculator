@@ -1,0 +1,21 @@
+foods = []
+prices = []
+items = []
+for i in range(2):
+    food = input('Enter Food\n> ')
+    foods.append(food)
+    price = float(input('Enter Price\n> '))
+    prices.append(price)
+    items.append((food, price))
+total = 0
+for item in items:
+    total += item[1]
+
+if total > 15:
+    discount, total = total * 0.2, total * 0.8
+
+
+    print('-£{0:.2f} (20% discount applied)'.format(discount))
+    print('Total: £{0:.2f}'.format(total))
+else:
+    print('Total: £{0:.2f}'.format(total))
